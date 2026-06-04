@@ -533,6 +533,81 @@ const DATA = {
           ]
         }
       ]
+    },
+
+    /* ===================== 7. EXPORT & SHARING ===================== */
+    {
+      id: "export", emoji: "📤", type: "cards",
+      title: { th: "เอ็กซ์พอร์ต & แชร์ลงโซเชียล", en: "Export & Social Sharing" },
+      desc: {
+        th: "ตั้งค่าการบันทึกไฟล์ให้ภาพคมชัด สีตรง ไม่โดนบีบอัดจนเสียคุณภาพเมื่อลงโซเชียล — พร้อมขนาดที่เหมาะกับแต่ละแพลตฟอร์มอัปเดตปี 2025",
+        en: "Export your photos so they stay sharp and color-accurate on social media instead of getting crushed by compression — with the right sizes for each platform, updated for 2025."
+      },
+      items: [
+        {
+          name: "Use sRGB Color Space", nameTh: "ใช้คัลเลอร์สเปซ sRGB", level: 1,
+          desc: { th: "Instagram, Facebook และเว็บทั่วไปแสดงผลเฉพาะ sRGB แม้คุณแก้ภาพในสเปซกว้างกว่า (Adobe RGB / Display P3) ก็ควรส่งออกเป็น sRGB ไม่งั้นสีจะเพี้ยน โดยเฉพาะโทนแดง ส้ม และสีผิว", en: "Instagram, Facebook, and most of the web only display sRGB. Even if you edit in a wider space (Adobe RGB / Display P3), export to sRGB — otherwise colors shift, especially reds, oranges, and skin tones." },
+          bestFor: { th: "ทุกภาพที่จะลงเว็บหรือโซเชียล", en: "Any photo going to the web or social" },
+          tags: ["sRGB", "Color", "Beginner"],
+          tips: [
+            { th: "ตั้ง Color Space = sRGB ทุกครั้งตอน export สำหรับโซเชียล", en: "Always set Color Space = sRGB when exporting for social." },
+            { th: "เก็บไฟล์ต้นฉบับสเปซกว้างไว้ต่างหากสำหรับงานพิมพ์", en: "Keep a wider-gamut master separately for printing." }
+          ]
+        },
+        {
+          name: "Right Size per Platform", nameTh: "ขนาดที่เหมาะกับแต่ละแพลตฟอร์ม", level: 1,
+          desc: { th: "Instagram ย่อภาพที่กว้างเกิน ~1080px เสมอ ส่งออกให้ตรงขนาดเป้าหมายเองจะคมกว่าปล่อยให้แอปย่อ ภาพแนวตั้งกินพื้นที่ฟีดและได้ความละเอียดมากที่สุด", en: "Instagram always shrinks images wider than ~1080px. Export to the target size yourself for sharper results than letting the app resize. Vertical images use the most feed space and detail." },
+          bestFor: { th: "ลง IG / Facebook ให้คมเต็มจอ", en: "Posting to IG / Facebook at full sharpness" },
+          tags: ["1080px", "Sizing", "Instagram"],
+          tips: [
+            { th: "IG ฟีด: แนวตั้ง 1080×1350 (4:5) · จัตุรัส 1080×1080 · แนวนอน 1080×566", en: "IG feed: portrait 1080×1350 (4:5) · square 1080×1080 · landscape 1080×566." },
+            { th: "IG สตอรี่/รีลส์: 1080×1920 (9:16) เว้นขอบบน-ล่าง ~250px ไว้ใส่ข้อความ", en: "IG Story/Reels: 1080×1920 (9:16) — keep ~250px clear top & bottom for text." },
+            { th: "กริดโปรไฟล์ IG ใหม่เป็น 3:4 (1080×1440) เผื่อเฟรมไว้ไม่ให้โดนครอป", en: "New IG profile grid is 3:4 (1080×1440) — leave headroom so it isn't cropped." },
+            { th: "Facebook: โพสต์ภาพ/ลิงก์ 1200×630 (1.91:1)", en: "Facebook: image/link posts 1200×630 (1.91:1)." }
+          ]
+        },
+        {
+          name: "JPEG Quality ~85%", nameTh: "คุณภาพ JPEG ราว 85%", level: 2,
+          desc: { th: "ส่งออก JPEG ที่คุณภาพ 80–85% คือจุดที่ลงตัวที่สุด ไฟล์ 100% ใหญ่เกินไปจน Instagram บีบอัดหนักกว่า ผลลัพธ์มักแย่ลง ส่วน 85% โดนบีบเพิ่มน้อยมากจนแทบมองไม่เห็นความต่าง", en: "Export JPEG at 80–85% — the sweet spot. A 100% file is so large that Instagram compresses it harder, often looking worse. At 85% the extra compression is minimal and nearly invisible." },
+          bestFor: { th: "ลดการสูญเสียคุณภาพจากการบีบอัดของแอป", en: "Minimizing quality loss from the app's compression" },
+          tags: ["JPEG", "Quality", "Compression"],
+          tips: [
+            { th: "เลือก JPEG (แพลตฟอร์มแปลงเป็น JPEG/WebP อยู่แล้ว)", en: "Choose JPEG (platforms convert to JPEG/WebP anyway)." },
+            { th: "อย่าดันคุณภาพ 100% เพราะไฟล์ใหญ่จะโดนบีบแรงขึ้น", en: "Don't push 100% — the bigger file gets compressed harder." }
+          ]
+        },
+        {
+          name: "Turn Off Output Sharpening", nameTh: "ปิดชาร์ปตอนส่งออก", level: 2,
+          desc: { th: "Instagram ใส่ชาร์ปของตัวเองให้อัตโนมัติ ถ้าภาพที่ส่งออกใส่ output sharpening มาแล้ว ความคมจะซ้อนกันจนภาพดูแข็งกระด้างและเป็นดิจิทัล", en: "Instagram applies its own sharpening automatically. If your export already has output sharpening baked in, they stack — making the photo look harsh and digital." },
+          bestFor: { th: "ภาพที่มีรายละเอียด เส้นผม ขนสัตว์ ใบไม้", en: "Detailed shots — hair, fur, foliage" },
+          tags: ["Sharpening", "Detail"],
+          tips: [
+            { th: "ปิด output sharpening เมื่อส่งออกสำหรับโซเชียลโดยเฉพาะ", en: "Disable output sharpening specifically for social exports." },
+            { th: "ถ้าภาพดูคมแข็งหลังโพสต์ ครั้งหน้าลดชาร์ปลง", en: "If posts look over-crunchy, dial sharpening back next time." }
+          ]
+        },
+        {
+          name: "File Format & Metadata", nameTh: "ฟอร์แมตไฟล์ & เมตาดาตา", level: 2,
+          desc: { th: "Instagram รับ JPEG/PNG/HEIC แล้วแปลงเป็น WebP ตอนอัป การแปลงไฟล์ทุกครั้งคือการเสียคุณภาพ ส่ง JPEG sRGB ที่สะอาดไปเลยดีที่สุด และอย่าลบเมตาดาตาทั้งหมดเพราะจะลบ color profile ไปด้วย", en: "Instagram accepts JPEG/PNG/HEIC then converts to WebP on upload — each conversion costs quality, so hand it a clean sRGB JPEG. And don't strip all metadata: that removes the color profile too." },
+          bestFor: { th: "คงคุณภาพและสีให้ตรงที่สุด", en: "Keeping quality and color intact" },
+          tags: ["JPEG", "Metadata", "Workflow"],
+          tips: [
+            { th: "เลี่ยงการแปลงซ้ำ HEIC→JPEG→WebP ส่ง JPEG sRGB ตรงๆ", en: "Avoid repeat conversions (HEIC→JPEG→WebP) — send a JPEG directly." },
+            { th: "เลือก 'camera info only' เพื่อเก็บโปรไฟล์สี/ค่ากล้องแต่ตัด GPS", en: "Use 'camera info only' to keep the color profile but remove GPS." },
+            { th: "อัปจากเดสก์ท็อปมักได้คุณภาพดีกว่าแอปย่อภาพให้เอง", en: "Uploading from desktop often beats letting the app resize." }
+          ]
+        },
+        {
+          name: "Social Export Recipe", nameTh: "สูตรส่งออกลงโซเชียล", level: 1,
+          desc: { th: "สูตรลัดที่ใช้ซ้ำได้ทุกครั้ง: sRGB · ด้านยาว 1080–1350px ตามอัตราส่วน · JPEG 85% · ปิดชาร์ป · คงโปรไฟล์สี แค่นี้ภาพก็คมสวยสีตรงบนฟีด", en: "A repeatable recipe: sRGB · long edge 1080–1350px for the ratio · JPEG 85% · sharpening off · keep the color profile. That's it — sharp, color-true photos in the feed." },
+          bestFor: { th: "ตั้งเป็นพรีเซ็ตไว้ใช้ซ้ำ", en: "Save it as a reusable export preset" },
+          tags: ["Recipe", "Preset", "Beginner"],
+          tips: [
+            { th: "บันทึกเป็นพรีเซ็ต export ใน Lightroom/แอปแก้ภาพไว้กดครั้งเดียว", en: "Save it as an export preset in Lightroom/your editor for one-click use." },
+            { th: "เก็บไฟล์ต้นฉบับความละเอียดเต็มไว้เสมอ เผื่องานพิมพ์ภายหลัง", en: "Always keep the full-resolution master for future prints." }
+          ]
+        }
+      ]
     }
   ],
 
