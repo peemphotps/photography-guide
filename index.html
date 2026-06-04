@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography Guide · คู่มือถ่ายภาพให้สวย</title>
+  <meta name="description" content="แหล่งรวมความรู้การถ่ายภาพ — การจัดองค์ประกอบ (composition), การจัดแสง, ประเภทการถ่ายภาพ และการตั้งค่ากล้อง สำหรับมือใหม่ถึงมืออาชีพ" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📷</text></svg>" />
+</head>
+<body>
+  <!-- Sidebar / Nav -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <span class="brand-icon">📷</span>
+      <div>
+        <h1 class="brand-title">Photography Guide</h1>
+        <p class="brand-sub" data-i18n="brand.sub">คู่มือถ่ายภาพให้สวย</p>
+      </div>
+    </div>
+    <nav class="nav" id="nav"><!-- nav links injected by main.js --></nav>
+    <div class="sidebar-foot">
+      <p class="lvl-legend">
+        <span class="lvl lvl-1">มือใหม่</span>
+        <span class="lvl lvl-2">กลาง</span>
+        <span class="lvl lvl-3">โปร</span>
+      </p>
+    </div>
+  </aside>
+
+  <!-- Top bar (mobile + controls) -->
+  <header class="topbar">
+    <button class="menu-btn" id="menuBtn" aria-label="menu">☰</button>
+    <div class="search-wrap">
+      <input type="search" id="search" placeholder="ค้นหาเทคนิค… (เช่น thirds, แสง, portrait)" />
+    </div>
+    <div class="controls">
+      <button class="lang-btn" id="langBtn" title="สลับภาษา">
+        <span class="lang-on">TH</span><span class="lang-off">EN</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="content" id="content">
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <h2 class="hero-title" data-i18n="hero.title">ถ่ายรูปให้สวย เริ่มจากเข้าใจหลักการ</h2>
+      <p class="hero-lead" data-i18n="hero.lead">
+        คู่มือรวมเทคนิคการจัดองค์ประกอบ การจัดแสง และการตั้งค่ากล้อง
+        พร้อมภาพประกอบและคำแนะนำว่าแต่ละแบบเหมาะกับการถ่ายอะไร — สำหรับมือใหม่ถึงมืออาชีพ
+      </p>
+      <div class="hero-stats" id="heroStats"></div>
+    </section>
+
+    <!-- Sections injected by render.js -->
+    <div id="sections"></div>
+
+    <footer class="site-foot">
+      <p data-i18n="foot.made">สร้างด้วย HTML/CSS/JS ล้วน · เปิดได้ทันที ไม่ต้องมีเซิร์ฟเวอร์</p>
+      <p class="muted">Photography Guide · 2026</p>
+    </footer>
+  </main>
+
+  <div class="scrim" id="scrim"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
