@@ -633,5 +633,30 @@ const DATA = {
       [{ th: "มาโคร", en: "Macro" }, "f/11", "1/200s", "200", { th: "เต็มเฟรม", en: "Fill the frame" }],
       [{ th: "ในร่ม/งานเลี้ยง", en: "Indoor/event" }, "f/2.8", "1/160s", "1600", { th: "เฟรมมิ่ง + เด้งแฟลช", en: "Framing + bounce flash" }]
     ]
+  },
+
+  /* ===================== 8. EXPORT CHEAT SHEET ===================== */
+  exportsheet: {
+    id: "exportsheet", emoji: "📐",
+    title: { th: "ตารางส่งออกภาพลงโซเชียล", en: "Social Export Size Reference" },
+    desc: {
+      th: "ขนาดและค่าที่เหมาะสมสำหรับแต่ละแพลตฟอร์ม — ทุกแพลตฟอร์ม: ใช้ sRGB · JPEG · ปิด output sharpening",
+      en: "Optimal sizes and settings per platform — all platforms: sRGB · JPEG · output sharpening OFF"
+    },
+    head: [
+      { th: "แพลตฟอร์ม", en: "Platform" },
+      { th: "ขนาด (px)", en: "Size (px)" },
+      { th: "อัตราส่วน", en: "Ratio" },
+      { th: "คุณภาพ JPEG", en: "JPEG Quality" },
+      { th: "หมายเหตุ", en: "Notes" }
+    ],
+    rows: [
+      [{ th: "IG ฟีด — แนวตั้ง", en: "IG Feed — Portrait" }, "1080 × 1350", "4:5", "80–85%", { th: "พื้นที่ฟีดมากที่สุด แนะนำสุด", en: "Max feed real estate — recommended" }],
+      [{ th: "IG ฟีด — จัตุรัส", en: "IG Feed — Square" }, "1080 × 1080", "1:1", "80–85%", { th: "รูปแบบคลาสสิก", en: "Classic format" }],
+      [{ th: "IG ฟีด — แนวนอน", en: "IG Feed — Landscape" }, "1080 × 566", "1.91:1", "80–85%", { th: "พื้นที่ฟีดน้อยที่สุด", en: "Least feed space" }],
+      [{ th: "IG โปรไฟล์ กริด (thumbnail)", en: "IG Profile Grid (thumbnail)" }, "1080 × 1440", "3:4", "80–85%", { th: "กริดใหม่ปี 2025 — เผื่อเฟรมไม่ให้โดนครอป", en: "2025 new grid — frame to avoid thumbnail crop" }],
+      [{ th: "IG สตอรี่ / รีลส์", en: "IG Story / Reels" }, "1080 × 1920", "9:16", "80–85%", { th: "เว้นขอบบน-ล่าง ~250px สำหรับข้อความ UI", en: "Keep ~250px clear top & bottom for UI text" }],
+      [{ th: "Facebook โพสต์ / ลิงก์พรีวิว", en: "Facebook Post / Link Preview" }, "1200 × 630", "1.91:1", "80–85%", { th: "ใช้ได้ทั้งโพสต์รูปและ link card", en: "Works for both image posts and link cards" }]
+    ]
   }
 };

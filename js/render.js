@@ -292,6 +292,7 @@ function renderAll() {
   root.innerHTML = "";
   DATA.sections.forEach((sec) => root.appendChild(buildSection(sec)));
   root.appendChild(buildCheatSheet(DATA.cheatsheet));
+  root.appendChild(buildCheatSheet(DATA.exportsheet));
 
   const stats = document.getElementById("heroStats");
   const count = (id) => DATA.sections.find((s) => s.id === id).items.length;

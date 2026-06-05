@@ -21,7 +21,8 @@
     const nav = document.getElementById("nav");
     nav.innerHTML = "";
     const items = [...DATA.sections.map((s) => ({ id: s.id, emoji: s.emoji, title: s.title })),
-                   { id: DATA.cheatsheet.id, emoji: DATA.cheatsheet.emoji, title: DATA.cheatsheet.title }];
+                   { id: DATA.cheatsheet.id, emoji: DATA.cheatsheet.emoji, title: DATA.cheatsheet.title },
+                   { id: DATA.exportsheet.id, emoji: DATA.exportsheet.emoji, title: DATA.exportsheet.title }];
     items.forEach((s) => {
       const a = document.createElement("a");
       a.href = "#" + s.id;
