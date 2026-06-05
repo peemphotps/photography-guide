@@ -13,7 +13,8 @@
 4. ⚙️ **Camera Settings** — Exposure Triangle (รูรับแสง / ชัตเตอร์ / ISO) พร้อมตารางค่าแนะนำ
 5. 🎓 **Pro Tips** — focal length, RAW vs JPEG, white balance, focus modes, เช็กลิสต์, ข้อผิดพลาดที่พบบ่อย
 6. 🎛️ **Filters** — UV/protection, CPL (โพลาไรซ์), ND, Variable ND, GND, Black Mist, ฟิลเตอร์สี พร้อมวิธีใช้
-7. 📋 **Cheat Sheet** — ตารางสรุปค่าตั้งต้นแต่ละสถานการณ์
+7. 📤 **Export & Sharing** — ส่งออกภาพลงโซเชียลให้คมสวยสีตรง: sRGB, ขนาด IG/Facebook ปี 2025, JPEG 85%, ปิดชาร์ป, ฟอร์แมต/เมตาดาตา
+8. 📋 **Cheat Sheet** — ตารางสรุปค่าตั้งต้นแต่ละสถานการณ์
 
 ## รูปตัวอย่าง
 การ์ดแต่ละใบใช้ **รูปถ่ายจริง** โหลดจาก [LoremFlickr](https://loremflickr.com) ตามคีย์เวิร์ด (ฟรี ไม่ต้องมี API key)

@@ -59,6 +59,10 @@ const PHOTOS = {
   "Neutral Density (ND)": "waterfall,longexposure", "Variable ND": "videocamera,filmmaking",
   "Graduated ND (GND)": "sunset,landscape", "Black Mist / Diffusion": "bokeh,cinematic",
   "Color / Creative": "colorful,abstract",
+  // Export & sharing
+  "Use sRGB Color Space": "colorful,spectrum", "Right Size per Platform": "smartphone,social",
+  "JPEG Quality ~85%": "computer,screen", "Turn Off Output Sharpening": "macro,detail",
+  "File Format & Metadata": "laptop,editing", "Social Export Recipe": "phone,instagram",
 };
 
 function hashNum(str) { let h = 0; for (let i = 0; i < str.length; i++) h = (h * 31 + str.charCodeAt(i)) % 997; return h; }
@@ -288,6 +292,7 @@ function renderAll() {
   root.innerHTML = "";
   DATA.sections.forEach((sec) => root.appendChild(buildSection(sec)));
   root.appendChild(buildCheatSheet(DATA.cheatsheet));
+  root.appendChild(buildCheatSheet(DATA.exportsheet));
 
   const stats = document.getElementById("heroStats");
   const count = (id) => DATA.sections.find((s) => s.id === id).items.length;
