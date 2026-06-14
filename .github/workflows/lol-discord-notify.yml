@@ -1,0 +1,37 @@
+name: LoL Esports Discord Notifier
+
+on:
+  schedule:
+    # Every 5 minutes
+    - cron: "*/5 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Check schedule and notify Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          # Customize tracked leagues (comma-separated lolesports slugs)
+          LOL_LEAGUES: first_stand,lck,msi,worlds
+        run: node scripts/lol-discord-notify.js
+
+      - name: Commit updated notification state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/lol-notified-matches.json
+          git diff --staged --quiet || git commit -m "chore: update LoL match notification state"
+          git push

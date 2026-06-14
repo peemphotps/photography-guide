@@ -56,3 +56,18 @@ photography-guide/
 ## เพิ่ม/แก้เนื้อหา
 แก้ที่ `js/data.js` เท่านั้น — เพิ่ม object ใน `items[]` ของแต่ละ section
 ข้อความใส่เป็น `{ th: "ไทย", en: "English" }` ระบบจะสลับภาษาให้อัตโนมัติ
+
+## 🔔 LoL Esports → Discord Notifier
+GitHub Action ที่เช็กตาราง [LoL Esports schedule](https://lolesports.com/en-US/leagues/first_stand,lck,msi,worlds)
+ทุก 5 นาที และส่งข้อความเข้า Discord อัตโนมัติทันทีที่แมตช์เริ่ม (state เปลี่ยนเป็น `inProgress`)
+
+### ตั้งค่า
+1. สร้าง [Discord Webhook](https://support.discord.com/hc/en-us/articles/228383668) ในช่องที่ต้องการ
+2. ไปที่ repo **Settings → Secrets and variables → Actions** → เพิ่ม secret ชื่อ `DISCORD_WEBHOOK_URL` (วาง webhook URL)
+3. Workflow จะรันอัตโนมัติตาม schedule ใน [`.github/workflows/lol-discord-notify.yml`](.github/workflows/lol-discord-notify.yml)
+   (หรือกด **Run workflow** เพื่อทดสอบทันที)
+
+### ปรับแต่ง
+- เปลี่ยนลีกที่ติดตามได้ที่ env `LOL_LEAGUES` ใน workflow (ค่าเริ่มต้น: `first_stand,lck,msi,worlds` — ใส่ slug ของลีกตาม URL ของ lolesports.com คั่นด้วย `,`)
+- สถานะแมตช์ที่แจ้งไปแล้วถูกบันทึกไว้ที่ [`data/lol-notified-matches.json`](data/lol-notified-matches.json) เพื่อไม่ให้แจ้งซ้ำ
+- ไฟล์สคริปต์หลัก: [`scripts/lol-discord-notify.js`](scripts/lol-discord-notify.js) (รันได้ในเครื่องด้วย `DISCORD_WEBHOOK_URL=... node scripts/lol-discord-notify.js`)
